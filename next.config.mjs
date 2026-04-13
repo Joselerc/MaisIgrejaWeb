@@ -6,12 +6,12 @@ const nextConfig = {
         destination: '/contato',
       },
       {
-        source: '/política-de-privacidade',
-        destination: '/politica-de-privacidade',
+        source: '/política-de-privacidad',
+        destination: '/politica-privacidad-es',
       },
       {
-        source: '/pol%C3%ADtica-de-privacidade',
-        destination: '/politica-de-privacidade',
+        source: '/pol%C3%ADtica-de-privacidad',
+        destination: '/politica-privacidad-es',
       },
       {
         source: '/segurança-infantil',
@@ -20,6 +20,10 @@ const nextConfig = {
       {
         source: '/seguran%C3%A7a-infantil',
         destination: '/seguranca-infantil',
+      },
+      {
+        source: '/seguridad-infantil',
+        destination: '/politica-seguridad-infantil-es',
       },
       {
         source: '/eliminación-cuenta-datos',
