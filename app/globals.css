@@ -226,6 +226,72 @@ main {
   padding-left: 22px;
 }
 
+.deletion-page .contact-form {
+  margin: 8px 0 64px;
+}
+
+.deletion-page {
+  max-width: 980px;
+}
+
+.deletion-intro {
+  display: grid;
+  gap: 14px;
+  max-width: 900px;
+  margin-bottom: 18px;
+}
+
+.deletion-intro h1 {
+  max-width: 860px;
+  line-height: 1.02;
+}
+
+.deletion-intro p {
+  margin: 0;
+  max-width: 760px;
+}
+
+.deletion-page .contact-email-label {
+  margin-top: 4px;
+}
+
+.deletion-page .contact-email {
+  margin-bottom: 0;
+  width: fit-content;
+}
+
+.deletion-page .legal-section {
+  max-width: 940px;
+  margin-top: 14px;
+}
+
+.deletion-page .legal-section h2,
+.deletion-page .legal-section p {
+  max-width: 920px;
+}
+
+.deletion-page .legal-section h2 {
+  margin-bottom: 12px;
+}
+
+.deletion-page .legal-section p {
+  margin: 0 0 14px;
+}
+
+.deletion-page .legal-section ul {
+  display: grid;
+  gap: 16px;
+  padding-left: 26px;
+}
+
+.deletion-page .legal-section li {
+  max-width: 900px;
+}
+
+.deletion-page .form-status {
+  margin-top: 0;
+}
+
 .site-footer {
   padding: 40px 0 28px;
 }
@@ -272,6 +338,10 @@ main {
 
   .contact-form {
     grid-template-columns: 1fr;
+  }
+
+  .deletion-page .contact-form {
+    margin-bottom: 48px;
   }
 
   .footer-email {

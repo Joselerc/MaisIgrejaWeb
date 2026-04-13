@@ -2,7 +2,12 @@
 
 import { useState } from 'react';
 
-export default function ContactForm() {
+export default function ContactForm({
+  subject = 'Contato Mais Igreja',
+  messageLabel = 'Mensagem',
+  messagePlaceholder = '',
+  successMessage = 'Mensagem enviada com sucesso.',
+}) {
   const [status, setStatus] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -16,6 +21,7 @@ export default function ContactForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          assunto: subject,
           nome: data.get('nome'),
           sobrenome: data.get('sobrenome'),
           email: data.get('email'),
@@ -31,7 +37,7 @@ export default function ContactForm() {
       }
 
       event.currentTarget.reset();
-      setStatus('Mensagem enviada com sucesso.');
+      setStatus(successMessage);
     } catch {
       setLoading(false);
       setStatus('Não foi possível enviar sua mensagem. Tente novamente.');
@@ -53,8 +59,8 @@ export default function ContactForm() {
         <input name="email" type="email" required />
       </label>
       <label className="full">
-        <span>Mensagem</span>
-        <textarea name="mensagem" required />
+        <span>{messageLabel}</span>
+        <textarea name="mensagem" placeholder={messagePlaceholder} required />
       </label>
       <button type="submit" disabled={loading}>
         {loading ? 'Enviando...' : 'Enviar'}

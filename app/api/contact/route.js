@@ -4,6 +4,7 @@ const requiredEnv = ['SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASS'];
 
 export async function POST(request) {
   const body = await request.json();
+  const assunto = String(body?.assunto || 'Contato Mais Igreja').trim();
   const nome = String(body?.nome || '').trim();
   const sobrenome = String(body?.sobrenome || '').trim();
   const email = String(body?.email || '').trim();
@@ -37,7 +38,7 @@ export async function POST(request) {
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
       to: 'support@maisigreja.io',
       replyTo: email,
-      subject: `Contato Mais Igreja: ${nome} ${sobrenome}`.trim(),
+      subject: `${assunto}: ${nome} ${sobrenome}`.trim(),
       text: [
         `Nome: ${nome}`,
         `Sobrenome: ${sobrenome || '-'}`,

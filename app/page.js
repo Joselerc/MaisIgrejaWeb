@@ -13,7 +13,7 @@ export default function HomePage() {
             comunicação e o engajamento dos membros Tudo para a realidade das igrejas
             brasileiras.
           </p>
-          <Link className="primary-button" href="/contato">
+          <Link className="primary-button" href="/contacto">
             Quero conhecer a solução
           </Link>
         </div>
